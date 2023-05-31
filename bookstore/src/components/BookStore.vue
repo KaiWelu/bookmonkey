@@ -9,8 +9,20 @@
       </tr>
       <tr v-for="book in bookList" :key="book.id">
         <td>{{ book.title }}</td>
-        <td>{{ book.isbn }}</td>
-        <td><button>Edit</button></td>
+        <td>
+          <router-link
+            :to="{ name: 'DetailView', params: { isbn: book.isbn } }"
+            >{{ book.isbn }}</router-link
+          >
+        </td>
+        <td>
+          <button>
+            <router-link
+              :to="{ name: 'DetailView', params: { isbn: book.isbn } }"
+              >Edit</router-link
+            >
+          </button>
+        </td>
       </tr>
     </table>
   </article>
