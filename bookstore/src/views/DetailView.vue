@@ -1,9 +1,11 @@
 <template>
-  <img :src="book.cover" />
-  <h1>{{ book.title }}</h1>
-  <h2>{{ book.subtitle }}</h2>
-  <p>{{ book.author }}</p>
-  <div>{{ book.abstract }}</div>
+  <div class="detail-wrapper">
+    <h1>{{ book.title }}</h1>
+    <h2>{{ book.subtitle }}</h2>
+    <p>{{ book.author }}</p>
+    <div>{{ book.abstract }}</div>
+  </div>
+  <!-- <img :src="book.cover" /> -->
 </template>
 
 <script>
@@ -25,4 +27,16 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style>
+.detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 1rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+img {
+}
+</style>

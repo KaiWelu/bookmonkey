@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AddBookView from "@/views/AddBookView.vue";
 import DetailView from "@/views/DetailView.vue";
+import EditView from "@/views/EditView.vue";
 
 const routes = [
   {
@@ -27,6 +28,11 @@ const routes = [
     path: "/books/:isbn",
     name: "DetailView",
     component: DetailView,
+  },
+  {
+    path: "/books/:isbn",
+    name: "EditView",
+    component: EditView,
   },
 ];
 

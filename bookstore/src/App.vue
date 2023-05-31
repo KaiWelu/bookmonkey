@@ -1,7 +1,9 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link :to="{ name: 'AddBookView' }">Add Book</router-link>
+    <router-link class="nav-button" to="/">Booklist</router-link>
+    <router-link class="nav-button" :to="{ name: 'AddBookView' }"
+      >Add Book</router-link
+    >
   </nav>
   <div><router-view /></div>
 </template>
@@ -16,23 +18,49 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  _font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  _color: #2c3e50;
+  position: relative;
+  background-color: #023047;
+  color: white;
 }
 
 nav {
   padding: 30px;
+  text-align: center;
+  background-color: #023047;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  /* position: fixed;
+  top: 0;
+  width: 100%; */
 }
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+}
+
+.nav-button {
+  all: unset;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  background-color: #219ebc;
+  color: white;
+  padding: 0.5rem;
+  border: solid #023047 4px;
+  border-radius: 4px;
+}
+
+.nav-button:hover {
+  color: #023047;
+  background-color: white;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  border: solid white 2px;
 }
 </style>
