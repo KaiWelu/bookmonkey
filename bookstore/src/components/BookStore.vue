@@ -10,12 +10,12 @@
         <td>{{ book.title }}</td>
         <td>
           <router-link
-            :to="{ name: 'DetailView', params: { isbn: book.isbn } }"
+            :to="{ name: 'DetailView', params: { isbn: book.id } }"
             >{{ book.isbn }}</router-link
           >
         </td>
         <td class="change-td">
-          <router-link :to="{ name: 'EditView', params: { isbn: book.isbn } }"
+          <router-link :to="{ name: 'EditView', params: { isbn: book.id } }"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
