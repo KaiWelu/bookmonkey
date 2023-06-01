@@ -6,6 +6,11 @@ import EditView from "@/views/EditView.vue";
 
 const routes = [
   {
+    path: "/add",
+    name: "AddBookView",
+    component: AddBookView,
+  },
+  {
     path: "/",
     name: "home",
     component: HomeView,
@@ -19,18 +24,14 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
-  {
-    path: "/",
-    name: "AddBookView",
-    component: AddBookView,
-  },
+
   {
     path: "/books/:isbn",
     name: "DetailView",
     component: DetailView,
   },
   {
-    path: "/books/:isbn",
+    path: "/books/edit/:isbn",
     name: "EditView",
     component: EditView,
   },
